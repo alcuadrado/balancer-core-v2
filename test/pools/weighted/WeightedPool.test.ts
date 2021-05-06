@@ -28,7 +28,7 @@ describe('WeightedPool', function () {
   });
 
   // TODO: These fail due to a Hardhat error
-  context.skip('for a 1 token pool', () => {
+  context.only('for a 1 token pool', () => {
     it('reverts if there is a single token', async () => {
       const tokens = await TokenList.create(1);
       const weights = [fp(1)];
